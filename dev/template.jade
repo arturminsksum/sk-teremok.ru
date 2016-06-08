@@ -1,0 +1,30 @@
+include jade/jade
+
+doctype
+html
+	+head()
+	body
+		+header('internal')
+		main.content.internal
+			.container-fluid
+				.row
+					ul.c-list-menu
+						li.c-list-item
+							a.c-list-link(href='#') Дома
+						li.c-list-item
+							a.c-list-link(href='#') Бани               
+					aside.col-lg-3.visible-lg.sidebar
+						+sidebar()
+					.col-lg-9
+						.content-right
+							+breadcrumb()              
+							block content
+							.section-separator        
+							+info()
+							.section-separator
+							+watched()
+		+footer()
+		+feedback("none")
+		+callback("none")
+		+success()
+		+scripts()

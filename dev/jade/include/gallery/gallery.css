@@ -1,0 +1,157 @@
+.gallery {
+	position: relative;
+
+	.block-title {
+		display: inline-block;
+		margin-bottom: 20px;
+		color: rgb(149, 169, 83);
+		text-align: left;
+	}
+
+	.btn {
+		&-see {
+			margin-top: 10px;
+			float: right;
+		}
+
+	}
+
+	&-section {
+		margin-bottom: 50px;
+	}
+
+	&-block {
+		margin-bottom: 30px;
+		padding: 25px 15px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 1px 2px 0px rgba(0, 0, 1, 0.1);
+		text-align: left;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+	}
+
+	&-wrap {
+		text-align: center;
+		font-size: 0;
+	}
+
+	&-item {
+		padding: 10px;
+		display: inline-block;
+		width: 33.33333333%;
+	}
+
+	.figure-name {
+		margin: 0;
+		bottom: 40%;
+
+		.fa.fa-eye {
+			font-size: 30px;
+		}
+
+	}
+
+	&-name {
+		margin-top: 10px;
+		display: block;
+		font-size: 16px;
+		color: $color;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+	}
+
+	&-type {
+		margin-bottom: 20px;
+
+		.btn {
+			margin-right: 30px;
+			width: 127px;
+			height: 26px;
+			border-width: 2px;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+		}
+
+	}
+
+	&-prod {
+		margin-bottom: 50px;
+		padding: 15px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 1px 2px 0px rgba(0, 0, 1, 0.1);
+
+		.gallery-item {
+			width: 16.66666667%;
+		}
+
+	}
+
+	&-pagination {
+		margin-top: 20px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		text-align: right;
+	}
+
+	&-onmap {
+		display: inline-block;
+		position: relative;
+		margin-right: 65px;
+		font-size: 16px;
+		color: rgb(149, 169, 83);
+		text-decoration: underline;
+
+		&:before {
+			width: 26px;
+			height: 24px;
+			background-position: -5px -5px;
+			content: '';
+			position: absolute;
+			top: -3px;
+			left: -35px;
+			background-image: url(../img/spritesheet.png);
+			background-repeat: no-repeat;
+		}
+
+	}
+
+}
+
+.certificates {
+	position: relative;
+
+	&-list {
+		margin-bottom: 50px;
+		padding: 15px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 1px 2px 0px rgba(0, 0, 1, 0.1);
+
+		.certificates-item {
+			display: inline-block;
+			width: 16.66666667%;
+			padding: 10px;
+		}
+
+	}
+	.figure-name {
+		bottom: 50px;
+	}
+
+	&-wrap {
+		text-align: center;
+		font-size: 0;
+	}
+
+	&-item {
+	}
+
+}

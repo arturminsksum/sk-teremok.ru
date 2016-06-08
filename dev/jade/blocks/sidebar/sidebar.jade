@@ -1,0 +1,21 @@
+mixin sidebar(o)
+    .sidebar-wrap
+      p.section-title: strong Наши проекты
+      ul.s-menu.house
+        a.s-menu-title(href='#'): strong Дома
+        li.s-menu-item
+          a.s-menu-link(href='#') Каркасные дома
+        li.s-menu-item
+          a.s-menu-link(href='#') Щитовые дома
+        li.s-menu-item
+          a.s-menu-link(href='#') Дома из бруса
+      ul.s-menu.bathhouse
+        a.s-menu-title(href='#'): strong Бани
+        li.s-menu-item
+          a.s-menu-link(href='#') Каркасные бани
+        li.s-menu-item
+          a.s-menu-link(href='#') Бани из бруса   
+      a(href="").sidebar-banner
+        img.img(src="img/side-banner.jpg", alt="")
+      p.block-title: strong Топ продаж
+      +list-item

@@ -1,0 +1,18 @@
+mixin watched-item
+ figure.figure-item
+  img.img.figure-img(src="img/watched.jpg", alt="").
+  figurecaption.figure-caption
+    p.figure-name Проект дома - Д-4601
+    a.figure-link(href="") 
+
+mixin watched()
+  section.watched                              
+    h4.block-title Вы смотрели:
+    .watched-wrap
+      +watched-item
+      +watched-item
+      +watched-item
+      +watched-item
+      +watched-item
+      +watched-item
+      +watched-item

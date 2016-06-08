@@ -1,0 +1,56 @@
+
+mixin header(dir)
+  - var dir = (typeof dir === 'undefined') ? '' : dir
+  header.header(class=''+dir)
+    .toggle.hidden-lg
+      input#hmt.toggle-ticker(type='checkbox')
+      label.toggle-title(for='hmt') Меню
+      label.btn-toggle(for='hmt')
+        span.toggle-first
+        span.toggle-second
+        span.toggle-third  
+    section.h-info
+      .container-fluid
+        .h-info-wrap.clearfix
+            .h-info-block.tels
+                a.h-info-logo(href='/')
+                  img.img(src='img/logo.png',alt='Логотип')
+                .h-info-contacts.msc
+                  p.h-info-city: strong Москва
+                  p.h-info-phone: strong +7(495)989-77-21
+                .h-info-contacts.spb
+                  p.h-info-city: strong Санкт-Петербург
+                  p.h-info-phone: strong +7(812)925-04-29
+            .h-info-block.links.hidden-xs
+                //- a.btn.btn-default.btn_object(href='/cart.html')
+                //-   | Калькулятор
+                a.btn.btn-yellow.btn-object(href='#')
+                  | Наши объекты
+                a.btn.btn-yellow.btn-call(href='#callback')
+                  | Заказать звонок            
+            .h-info-block.links.visible-xs
+                a.btn.btn-yellow.btn-object(href='#')
+                  | Как проехать
+    section.h-nav
+      .container-fluid 
+        nav.h-nav-wrap
+          ul.h-menu
+            li.h-menu-item.active
+              a.h-menu-link(href='/') Главная
+            li.h-menu-item
+              a.h-menu-link(href='../level1.html') Проекты
+            li.h-menu-item
+              a.h-menu-link(href='../level2.html') Акции
+            li.h-menu-item
+              a.h-menu-link(href='../level3.html') Галерея
+            li.h-menu-item
+              a.h-menu-link(href='../level4.html') О компании
+            li.h-menu-item
+              a.h-menu-link(href='../gallery1.html') Новости    
+            li.h-menu-item
+              a.h-menu-link(href='../gallery2.html') Статьи 
+            li.h-menu-item
+              a.h-menu-link(href='../shares1.html') Отзывы
+            li.h-menu-item
+              a.h-menu-link(href='contacts.html') Контакты
+                       

@@ -1,0 +1,124 @@
+- var param_l = {'param1':'Каркасный','param2':'Щитовой','param3':'Из бруса'}
+- var param_r = {'param4':'Опорно-столбчатый','param5':'Свайно-винтовой','param6':'Ленточный'}
+
+
+mixin param-item(params)
+  each paramName, paramId in params  
+    .param-wrap
+      .param-item
+        .param-name: strong #{paramName}    
+        .param-check
+          input.input.input-check(type="checkbox",id=paramId)
+          label.label.label-check.param-price(for=paramId)
+            i.fa.fa-square-o  
+            span 150 000
+            span  руб.
+        .param-price-old
+          | Старая цена: 
+          span 200 000
+          |  руб.
+      a(href="#").param-complect Базовая комплектация #{paramName} дома       
+
+mixin char-item(charName,charValue,num)
+  .char-item
+    img.img.char-icon(src="img/char-"+num+".png", alt="")
+    p.char-name #{charName}
+    p.char-value: strong #{charValue}
+
+
+mixin slider-img
+  .slider-img(data-main="img/bathhouse.png",data-big="img/house.png")
+    img.img(src="img/side-banner.jpg", alt="")
+
+mixin level4(o)
+  h1.page-title Проект дома -  Д-4601
+  section.proj
+    .page-back
+      .visible-lg
+        span Вернуться в
+        a(href="#").btn.btn-brown.btn-back Каталог
+    .proj-section
+      .row
+        .col-lg-6
+          .proj-block
+            .proj-pics
+              a(href="img/project.jpg").pics-main-img
+                img.img(src="img/project.jpg", alt="")
+              .slider
+                +slider-img
+                +slider-img
+                +slider-img
+                +slider-img
+                +slider-img
+                +slider-img
+            a(href="").proj-ready: strong Готовый проект в галерее
+        .col-lg-6
+          .proj-block.right
+            .proj-param
+              .proj-param-tech
+                p.param-title: strong Технология строительства
+                +param-item(param_l)
+              .proj-param-base
+                p.param-title: strong Тип фундамента
+                +param-item(param_r)            
+            .proj-value
+              .proj-price
+                p.proj-price-name Цена от: 
+                p.proj-price-value: strong 195 000
+              .proj-credit
+                a(href="#").proj-credit-name В кредит
+                a(href="#order").btn.btn-yellow.btn-credit Хочу такой дом
+    .proj-section
+      .row
+        .col-lg-6
+          .proj-block
+            .proj-features
+              h3.section-title Особенности проекта
+              .text
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique recusandae ab officiis quis ut quo soluta quod a quia ipsum sapiente reprehenderit culpa corporis itaque quaerat consequatur vero eligendi voluptatum sint at nostrum modi ipsa illo dolores hic velit rem? Doloremque necessitatibus error harum numquam rerum neque reprehenderit deleniti alias enim obcaecati corporis similique excepturi repudiandae possimus totam. Vel provident magnam tempora nemo inventore ullam dicta nam quaerat laudantium in adipisci expedita nesciunt placeat sapiente deserunt accusantium corporis reprehenderit quo repellendus voluptas veritatis illum voluptatibus maiores illo excepturi itaque explicabo perspiciatis sequi facere. Officiis molestiae ducimus modi ad dolorum iste. 
+        .col-lg-6
+          .proj-block.right
+            .char
+              p.char-title: strong Основные характеристики проекта
+              .char-wrap
+                .char-block
+                  +char-item('Размер: ','6х6','1')
+                  +char-item('Площадь: ','140 м2','2')
+                .char-block
+                  +char-item('Этажность: ','2-ух этажный','3')
+                  +char-item('Доп. функции: ','балкон, мансарда','4')
+    .section-separator
+    .proj-section
+      .row
+        .col-lg-6
+          .proj-block
+            .proj-features
+              h3.section-title Особенности каркасных домов
+              .text
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique recusandae ab officiis quis ut quo soluta quod a quia ipsum sapiente reprehenderit culpa corporis itaque quaerat consequatur vero eligendi voluptatum sint at nostrum modi ipsa illo dolores hic velit rem? Doloremque necessitatibus error harum numquam rerum neque reprehenderit deleniti alias enim obcaecati corporis similique excepturi repudiandae possimus totam. Vel provident magnam tempora nemo inventore ullam dicta nam quaerat laudantium in adipisci expedita nesciunt placeat sapiente deserunt accusantium corporis reprehenderit quo repellendus voluptas veritatis illum voluptatibus maiores illo excepturi itaque explicabo perspiciatis sequi facere. Officiis molestiae ducimus modi ad dolorum iste. 
+        .col-lg-6
+          .proj-block.right
+            .char
+              .char-title: strong Другие проекты данного раздела
+              .slider
+                .slider-img
+                  img.img(src="img/slide-project.jpg", alt="")
+                .slider-img
+                  img.img(src="img/slide-project.jpg", alt="")
+                .slider-img
+                  img.img(src="img/slide-project.jpg", alt="")
+                .slider-img
+                  img.img(src="img/slide-project.jpg", alt="")
+                .slider-img
+                  img.img(src="img/slide-project.jpg", alt="")
+                .slider-img
+                  img.img(src="img/slide-project.jpg", alt="")
+  +order('none')
+
+
+
+
+
+

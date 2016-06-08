@@ -1,0 +1,92 @@
+.contacts {
+	&-links {
+		margin-bottom: 30px;
+		text-align: left;
+	}
+
+	.btn {
+		border-width: 2px;
+		height: 26px;
+
+		&-msc {
+			width: 127px;
+			margin-right: 30px;
+		}
+
+		&-spb {
+			width: 157px;
+		}
+
+		&-ask {
+			float: right;
+			width: 130px;
+		}
+
+	}
+
+	&-main {
+		text-align: left;
+		font-size: 0;
+	}
+
+	&-phone,
+	&-mail {
+		display: inline-block;
+		font-size: 22px;
+		
+		margin-bottom: 30px;
+		a {
+			color: rgb(121, 85, 72);
+		}
+	}
+
+	&-phone {
+		margin-right: 50px;
+	}
+	&-mail {
+	}
+
+}
+
+.expo {
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 1, 0.1);
+	margin-bottom: 50px;
+	font-size: 0;
+
+	&-block {
+			padding: 20px;
+			display: inline-block;	
+			vertical-align: top;	
+		&.left {
+			width: 40%;
+		}
+
+		&.right {
+			width: 60%;
+			text-align: center;
+		}
+
+	}
+
+	&-map {
+	}
+
+	&-info {
+		color: $color;
+		font-size: 18px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.title {
+			font-size: 24px;
+		}
+	}
+
+}

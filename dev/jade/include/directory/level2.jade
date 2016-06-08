@@ -1,0 +1,147 @@
+
+- var checkbox_custom = {'check1':'С балконом','check2':'С террасой','check3':'С эркером','check4':'С верандой'}
+- var checkbox_floor = {'check5':'С жилой мансардой','check6':'Одноэтажные','check7':'Полутороэтажные','check8':'Двухэтажные'}
+
+mixin checkbox(items)
+  each itemName, itemId in items         
+    .checkbox
+      input.input.input-check(type="checkbox",id=itemId)
+      label.label.label-check(for=itemId)
+        i.fa.fa-square-o
+        span #{itemName}
+mixin pagination
+  ul.pagination
+            li.pagination-item
+              a.pagination-link(href='#') &#8592
+            li.pagination-item.active
+              a.pagination-link(href='#') 1
+            li.pagination-item
+              a.pagination-link(href='#') 2
+            li.pagination-item
+              a.pagination-link(href='#') 3
+            li.pagination-item
+              a.pagination-link(href='#') 4
+            li.pagination-item
+              a.pagination-link(href='#') 5
+            li.pagination-item
+              a.pagination-link(href='#') &#8594
+
+mixin level2(o)
+  h1.page-title Проекты домов
+  section.product
+    .product-type
+      a(href="#").btn.btn-green.btn-frame Каркасные 
+      a(href="#").btn.btn-green.btn-panel Щитовые
+      a(href="#").btn.btn-green.btn-timber Из бруса
+    .product-text 
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam iusto provident impedit autem, laudantium voluptates nulla praesentium maxime, earum exercitationem officiis repellat sequi necessitatibus asperiores iure accusantium, et assumenda dolorem quo eum! Dolor alias nemo quis exercitationem ab libero dolores, nesciunt officiis mollitia animi, dignissimos expedita iure molestiae. Nostrum obcaecati laborum vero deserunt molestias enim nesciunt quibusdam ab consectetur ratione voluptates cum explicabo, amet, vitae quod numquam, eveniet assumenda sapiente harum. Cum ab quam facilis animi! Ipsam accusantium facilis ullam ducimus et, molestias deserunt omnis culpa eius maiores tempora nisi rerum necessitatibus perferendis numquam. Magni expedita voluptatem sapiente, ratione autem.
+    .product-filter
+      form.filter
+        .filter-top
+          .filter-block.find-more
+            button(type="submit").btn.btn-brown.btn-find Найти
+            a(href="javascript:void(0)").btn.btn-grey.btn-more Еше параметры
+          .filter-block.title
+            .filter-title Фильтр
+          .filter-block.price
+            span.filter-name Цена:
+            #slider-snap.slider-range
+            .slider-range-min-max
+              .slider-range-value
+                span от 
+                span#slider-snap-value-lower
+                span  руб
+              .slider-range-value
+                span до 
+                span#slider-snap-value-upper
+                span  руб
+            .filter-hide    
+              .slider-range-input
+                span от
+                input#input-number-lower(value='0')
+                span до
+                input#input-number-upper(value='100000')
+          .filter-block.size
+            span.filter-name Размер:
+            input.input.input-size(type="text")
+            span x
+            input.input.input-size(type="text")
+            span м 
+            .filter-hide
+              input#size1.input.input-hide(type="checkbox")
+              label.label(for="size1") 1x1
+              input#size2.input.input-hide(type="checkbox")
+              label.label(for="size2") 2x2
+              input#size3.input.input-hide(type="checkbox")
+              label.label(for="size3") 3x3
+              input#size4.input.input-hide(type="checkbox")
+              label.label(for="size4") 4x4
+              input#size5.input.input-hide(type="checkbox")
+              label.label(for="size5") 5x5
+              input#size6.input.input-hide(type="checkbox")
+              label.label(for="size6") 6x6
+              input#size7.input.input-hide(type="checkbox")
+              label.label(for="size7") 7x7
+              input#size8.input.input-hide(type="checkbox")
+              label.label(for="size8") 8x8
+          .filter-block.area
+            span.filter-name Площадь:
+            input.input.input-area(type="text")
+            span 
+              |м
+              sup 2 
+            .filter-hide
+              input#area1.input.input-hide(type="checkbox")
+              label.label(for="area1") до 100
+              input#area2.input.input-hide(type="checkbox")
+              label.label(for="area2") до 150
+              input#area3.input.input-hide(type="checkbox")
+              label.label(for="area3") до 200
+          .filter-block.custom
+            .filter-hide
+              +checkbox(checkbox_custom)
+        .filter-bottom      
+          .filter-block.floor
+            .filter-hide
+              span.filter-name Этажность:
+              +checkbox(checkbox_floor)
+          .filter-block.pick-reset
+            .filter-hide
+              button(type="submit").btn.btn-green.btn-pick Подобрать
+              a(href="#").btn.btn-grey.btn-reset Сбросить
+    
+    .product-items  
+      .sort
+        .sort-product
+          .sort-title Сортировать по:
+          a.sort-price(href="javascript:void(0);")
+            span.sort-name Цене
+            i.sort-icon.up
+        .sort-show
+          .visible-lg
+            .sort-title Показывать товаров:
+            select.sort-multi.dropdown.scrollable(name='count', id='')
+              option(value='', selected='selected') 10
+              option(value='') 20
+              option(value='') 50
+      .row
+        .col-md-3.col-sm-4
+           +list-item
+        .col-md-3.col-sm-4
+           +list-item
+        .col-md-3.col-sm-4
+           +list-item 
+        .col-md-3.col-sm-4
+           +list-item 
+        .col-md-3.col-sm-4
+           +list-item 
+        .col-md-3.col-sm-4
+           +list-item
+        .col-md-3.col-sm-4
+           +list-item
+        .col-md-3.col-sm-4
+           +list-item     
+      .product-pagination.visible-lg
+        +pagination
+      .product-look.hidden-lg
+        a(href="").btn.btn-green.btn-look Смотреть все

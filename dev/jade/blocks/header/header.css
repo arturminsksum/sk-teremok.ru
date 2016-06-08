@@ -1,0 +1,306 @@
+/*=== begin header style ===*/
+.header {
+	position: relative;
+}
+
+.h-info {
+	background: url(../img/bg-header.jpg) no-repeat;
+	background-size: cover;
+
+	&-wrap {
+		max-width: 1320px;
+		margin: 0 auto;
+		padding-bottom: 0;
+		text-align: center;
+	}
+
+	&-block {
+		position: relative;
+		text-align: center;
+
+		.btn {
+			display: block;
+			padding-left: 30px;
+			color: rgb(121, 85, 72);
+			background-color: rgba(255, 255, 255, 0.8);
+			width: 223px;
+			height: 39px;
+			line-height: 1.7;
+			font-size: 19px;
+
+			&:first-child {
+				margin-bottom: 15px;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 4px;
+				left: 15px;
+				background-image: url(../img/spritesheet.png);
+				background-repeat: no-repeat;
+			}
+
+			&-object {
+				float: left;
+
+				&:before {
+					width: 26px;
+					height: 24px;
+					background-position: -5px -5px;
+				}
+
+			}
+
+			&-call {
+				float: right;
+
+				&:before {
+					width: 25px;
+					height: 25px;
+					background-position: -41px -5px;
+				}
+
+			}
+
+		}
+
+	}
+
+	&-logo {
+		display: inline-block;
+		vertical-align: middle;
+		width: 295px;
+	}
+
+	&-contacts {
+		margin-top: 15px;
+		border-width: 4px;
+		border-color: rgb(253, 216, 53);
+		border-style: solid;
+		background-color: rgba(255, 255, 255, 0.8);
+		width: 232px;
+		height: 72px;
+		color: rgb(93, 64, 55);
+		line-height: 1.2;
+		text-align: center;
+
+		&.msc {
+			float: left;
+		}
+
+		&.spb {
+			float: right;
+		}
+
+	}
+
+	&-city {
+		margin: 8px 0 0 0;
+		font-size: 18px;
+	}
+
+	&-phone {
+		margin-top: 0;
+		font-size: 24px;
+	}
+
+}
+
+.h-nav {
+	position: static;
+	box-shadow: 0px 3px 5px 0px rgba(0, 0, 1, 0.2);
+
+	&-wrap {
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+
+}
+
+.h-menu {
+	width: auto;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&-item {
+		position: relative;
+		display: table-cell;
+		width: 1%;
+		text-align: center;
+		border-right: 1px solid rgb(253, 216, 53);
+		background-color: rgb(255, 255, 255);
+		transition: all 0.3s;
+
+		&:first-child {
+			border-left: 1px solid rgb(253, 216, 53);
+		}
+
+		&:hover {
+			background-color: rgb(253, 216, 53);
+		}
+
+	}
+
+	&-link {
+		display: block;
+		font-size: 22px;
+		color: rgb(93, 64, 55);
+		line-height: 1.2;
+		text-align: center;
+		padding: 15px 0;
+	}
+
+}
+
+.toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	&-ticker {
+		display: none;
+	}
+
+	&-title {
+		display: block;
+		padding: 12px 50px 13px 20px;
+		font-size: 18px;
+		color: rgb(121, 85, 72);
+		cursor: pointer;
+	}
+
+}
+
+.btn-toggle {
+	color: #fff;	/*background-color: rgb(253, 216, 53);*/
+	padding: 7px;
+	position: absolute;
+	top: 6px;
+	right: 5px;
+	cursor: pointer;
+	transition: left .23s;
+	z-index: 3;
+	width: 37px;
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+
+	span {
+		display: block;
+		height: 3px;
+		background-color: rgb(121, 85, 72);
+		margin: 7px 0 0;
+		transition: all .1s;
+		position: relative;
+
+		&.toggle-first {
+			margin-top: 0;
+		}
+
+	}
+
+}
+
+.toggle-ticker:checked ~ .btn-toggle span.toggle-first {
+	-webkit-transform: rotate(45deg);
+	top: 10px;
+}
+
+.toggle-ticker:checked ~ .btn-toggle span.toggle-second {
+	opacity: 0;
+}
+
+.toggle-ticker:checked ~ .btn-toggle span.toggle-third {
+	-webkit-transform: rotate(-45deg);
+	top: -10px;
+}
+
+/*=== end header style ===*/
+
+/*=== begin header 2 ===*/
+.internal {
+	.h-info {
+		&-wrap {
+			/*font-size: 0;*/
+			text-align: justify;
+
+			&:after {
+				content: "";
+				display: inline-block;
+				width: 100%;
+				vertical-align: middle;
+			}
+
+		}
+
+		&-block {
+			/*font-size: 0;*/
+			display: inline-block;
+			vertical-align: middle;
+			text-align: left;
+
+			&.tels {
+				width: 1000px;
+				text-align: justify;
+
+				&:after {
+					content: "";
+					display: inline-block;
+					width: 100%;
+					vertical-align: middle;
+				}
+
+			}
+
+			&.links {
+				width: 225px;
+			}
+
+			.btn {
+				float: none;
+
+				&-object {
+				}
+
+				&-call {
+				}
+
+			}
+
+		}
+
+		&-logo {
+			margin-bottom: 20px;
+		}
+
+		&-contacts {
+			display: inline-block;
+			vertical-align: middle;
+			float: none;
+
+			&.msc {
+			}
+
+			&.spb {
+			}
+
+		}
+
+		&-city {
+		}
+
+		&-phone {
+		}
+
+	}
+
+}
+
+/*=== end header 2 ===*/

@@ -1,0 +1,39 @@
+mixin gallery-item
+  .gallery-item
+    figure.figure-item
+      img.img.figure-img(src="img/project.jpg", alt="").
+      figurecaption.figure-caption
+        p.figure-name
+          i.fa.fa-eye
+        a.figure-link(href="img/project.jpg",rel="group") 
+    a(href="#").gallery-name Проект Д-2345
+
+mixin gallery-block(title)
+  .gallery-block
+    h4.block-title #{title}
+    a(href="").btn.btn-green.btn-see
+      i.fa.fa-eye
+      |Смотреть  
+    .gallery-wrap
+      - for (var x = 0; x < 3; x++)
+        +gallery-item
+
+mixin gallery1(o)
+  h1.page-title Галерея готовых проектов
+  section.gallery
+    .row
+      .col-lg-6
+        .gallery-section
+          h3.section-title Дома
+          +gallery-block('Каркасные')
+          +gallery-block('Щитовые')
+          +gallery-block('Из бруса ')
+      .col-lg-6
+        .gallery-section
+          h3.section-title Бани
+          +gallery-block('Каркасные')
+          +gallery-block('Щитовые')
+
+
+
+

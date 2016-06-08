@@ -1,0 +1,120 @@
+mixin category(title, img)
+        .category-wrap
+            .col-lg-2
+              .category-img
+                img.img(alt='...', src='img/'+img+'.png')
+            .col-lg-3  
+              h3.section-title Проекты #{title}
+              .row
+                .col-lg-4
+                  .category-item
+                    a.category-icon(href='#')
+                      .category-outer1.category-circle
+                      .category-outer2.category-circle  
+                      img(src="img/frame.png", alt="")
+                    a.category-link(href='#') Каркасные
+                .col-lg-4
+                  .category-item
+                    a.category-icon(href='#')
+                      .category-outer1.category-circle
+                      .category-outer2.category-circle  
+                      img(src="img/panel.png", alt="")
+                    a.category-link(href='#') Щитовые
+                if title=='домов'    
+                  .col-lg-4
+                    .category-item
+                      a.category-icon(href='#')
+                        .category-outer1.category-circle
+                        .category-outer2.category-circle  
+                        img(src="img/timber.png", alt="")
+                      a.category-link(href='#') Из бруса        
+  
+mixin index(o)
+    main.content
+      section.slider.hidden-xs
+          .slider-wrap
+
+                .item
+                  img.img(src='img/slide-1.jpg', alt='...')
+                  //- .carousel-caption
+                  //-   p Картинка 1
+                .item
+                  img.img(src='img/slide-2.jpg', alt='...')
+                  //- .carousel-caption
+                  //-   p Картинка 2
+                .item
+                  img.img(src='img/slide-3.jpg', alt='...')
+                  //- .carousel-caption
+                  //-   p Картинка 3
+              //- a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+              //-   span.glyphicon.glyphicon-chevron-left
+              //- a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+              //-   span.glyphicon.glyphicon-chevron-right
+      section.category       
+        .container-fluid
+          .c-list.hidden-lg
+            .c-list-title: strong Проекты
+            ul.c-list-menu
+              li.c-list-item
+                a.c-list-link(href='#') Проекты домов
+              li.c-list-item
+                a.c-list-link(href='#') Проекты бань        
+          .row.visible-lg
+            .col-lg-1
+            +category('домов','house')                        
+            +category('бань','bathhouse')
+            .col-lg-1  
+
+      section.hit
+        .container-fluid
+          .hit-wrap
+            h3.section-title Топ продаж
+            .row
+              .col-lg-1
+              .col-lg-2.col-sm-4
+                +list-item
+              .col-lg-2.col-sm-4.hidden-xs
+                +list-item
+              .col-lg-2.col-sm-4.hidden-xs
+                +list-item
+              .col-lg-2.visible-lg
+                +list-item
+              .col-lg-2.visible-lg
+                +list-item
+              .col-lg-1              
+      section.company
+        .container-fluid
+          .company-wrap
+            .row
+              .col-lg-5.col-lg-offset-1.col-sm-6
+                article.c-about
+                  h3.section-title: strong О нашей  компании
+                  p.text
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quia atque ipsam. Beatae cupiditate tempore consequatur labore sunt corporis nemo ex sequi cumque blanditiis quas aliquid distinctio non iste pariatur provident ipsam voluptates dolore voluptatum deleniti error doloremque eaque incidunt qui reprehenderit natus accusamus dolorem inventore nisi eum! Nostrum est vitae rerum modi ab nobis nisi ut accusamus commodi sint illo suscipit neque praesentium odit quia adipisci labore nemo dolores impedit dignissimos et laudantium itaque velit ipsa quo a aspernatur ducimus molestias molestiae quo a aspernatur ducimus molestias molestiae perferendis vitae eligendi autem modi quas numquam eos non illum cumque alias eum.
+              .col-lg-4.col-lg-offset-1.col-sm-6
+                article.c-comment
+                  p.text
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quia atque ipsam. Beatae cupiditate tempore consequatur labore sunt corporis nemo ex sequi cumque blanditiis quas aliquid distinctio non iste pariatur provident ipsam voluptates dolore voluptatum deleniti error doloremque eaque incidunt qui reprehenderit natus accusamus dolorem inventore nisi eum! Nostrum est vitae rerum modi ab nobinisi ut accusamuss nisi ut accusamus
+                  p.c-comment-name: b Иванов Иван Иванович,</br>директор
+                  .c-comment-img
+                    img.img(src='img/director.jpg', alt='...')         
+      section.working
+        .container-fluid
+          .working-wrap
+            .row
+              .col-lg-4.col-lg-offset-1
+                article.working-about
+                  h3.section-title: strong Наша работа не на словах, а на деле
+                  ul.working-ul.visible-lg
+                    li.working-li
+                      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    li.working-li
+                      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    li.working-li
+                      |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              .col-lg-3.col-sm-6
+                .working-video
+                  iframe(width='560', height='315', src='https://www.youtube.com/embed/sG3lDSW1EaU', frameborder='0', allowfullscreen='')
+              .col-lg-3.col-sm-6
+                .working-video
+                  iframe(width='420', height='315', src='https://www.youtube.com/embed/QwsO_KZpL3c', frameborder='0', allowfullscreen='')                

@@ -1,0 +1,70 @@
+mixin form-name(o)
+  .form-item
+    label.label.label-form(for='name') Ваше имя*:
+    input#name.input.input-form(name="form[user_name]", type='text', placeholder='Имя', pattern="[А-Яа-яЁёa-zA-Z`\\s]{2,50}", maxlength="50", required)
+    span.form-danger.form-danger-name
+mixin form-phone(o)
+  .form-item
+    label.label.label-form(for='phone') Ваш телефон*:
+    input#phone.input.input-form(name="form[user_phone]", type='text', placeholder='293003030', pattern="[0-9()-\\s+]{3,20}",maxlength="20", required)
+    span.form-danger.form-danger-phone
+
+mixin form-email(o)
+  .form-item
+    label.label.label-form(for='email') Ваш e-mail*:
+    input#email.input.input-form(name="form[user_email]", type='text', placeholder='test@mail.ru', pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z.]{2,8}$",maxlength="128", required)
+    span.form-danger.form-danger-email
+mixin form-comment(o)
+  .form-item
+    label.label.label-form(for='comment') Сообщение*:
+    textarea#comment.input.input-ta.input-form(name="form[user_comment]", type='text', rows="4", placeholder='Комментарий', pattern="[А-Яа-яЁёa-zA-Z`\\s]{1,256}", maxlength="256", required)
+    span.form-danger.form-danger-comment
+
+mixin form-captcha(o)
+  .form-item
+    input(type='hidden', name='captcha_sid', value='')
+    label.label.label-form.label-captcha(for='captcha') Введите слово на картинке:*
+    img.img-captcha(src='', width='80', height='40', alt='CAPTCHA')
+    input#captcha.input.input-captcha(type='text', name='captcha_word', maxlength='50', value='')  
+    span.form-danger.form-danger-captcha Введите слово на картинке:*
+
+
+mixin success(o)       
+  #success.form-success(style="display: none;")
+    |Спасибо за ваше сообщение! 
+    br
+    |В ближайшее время наши 
+    br
+    |менеджеры ответят вам.  
+    
+mixin callback(display)
+  section#callback.popup.popup-callback(style="display:"+display+";")
+    .block-title: strong Форма заказа звонка
+    form.form.form-callback(novalidate)
+      +form-name()
+      +form-phone()
+      .wrap-btn
+       button.btn.btn-yellow.btn-form(type="submit") Отправить
+
+mixin feedback(display)
+  section#feedback.popup.popup-feedback(style="display:"+display+";")
+    .block-title: strong Форма обратной связи
+    form.form.form-feedback(novalidate)
+      +form-name()
+      +form-email()
+      +form-phone()
+      +form-comment()
+      +form-captcha()
+      .wrap-btn
+       button.btn.btn-yellow.btn-form(type="submit") Отправить
+mixin order(display)
+  section#order.popup.popup-order(style="display:"+display+";")
+    .block-title: strong Заказать дом
+    form.form.form-order(novalidate)
+      +form-name()
+      +form-email()
+      +form-phone()
+      +form-comment()
+      +form-captcha()
+      .wrap-btn
+       button.btn.btn-yellow.btn-form(type="submit") Отправить       

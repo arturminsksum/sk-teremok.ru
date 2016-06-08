@@ -1,0 +1,12 @@
+
+mixin shares1(o)
+  h1.page-title Наши акции
+  section.shares
+    .shares-wrar
+      - for (var x = 0; x < 3; x++)  
+        .shares-item
+          a(href="").shares-name: strong Внимание! Скидки на зимнее строительство!
+          a(href="").shares-link
+            img.img(src="img/shares.jpg", alt="")  
+    .shares-pagination.visible-lg
+      +pagination

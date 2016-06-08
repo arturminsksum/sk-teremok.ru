@@ -1,0 +1,28 @@
+mixin expo
+  .expo
+    .expo-block.left
+      .expo-map
+        script(type='text/javascript', charset='utf-8', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=DWlGqQcbN-F2Kmn4qmG_zIYlO2NYBmf8&width=100%&height=240&lang=ru_RU&sourceType=constructor')
+    .expo-block.right 
+      p.expo-info.title Выставка домов "Малоэтажная страна"
+      p.expo-info.phone Тел.: +7(495)900-00-00
+      p.expo-info.mail E-mail: sk-teremok@inbox.ru
+      p.expo-info.person E-mail: sk-teremok@inbox.ru
+      p.expo-info.adress 
+        | Адрес: Россия, МО, г. Котельники,
+        | Дзержинское шоссе вл. 7/7, экспозиция малых форм, участок №2
+
+mixin contacts(o)
+  h1.page-title Наши проекты
+  section.contacts
+    .contacts-links
+      a(href="").btn.btn-green.btn-msc Москва
+      a(href="").btn.btn-green.btn-spb Санкт-Петербург
+      a(href="").btn.btn-brown.btn-ask Задать вопрос
+    .contacts-main
+      div.contacts-phone
+        a(href="tel:+74959897721"): strong Тел.: +7(495)989-77-21
+      div.contacts-mail
+        a(href="mailto:sk-teremok@inbox.ru"): strong E-mail: sk-teremok@inbox.ru
+    - for (var x = 0; x < 3; x++)  
+      +expo

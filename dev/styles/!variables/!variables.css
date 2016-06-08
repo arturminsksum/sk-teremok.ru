@@ -1,0 +1,240 @@
+$color: rgb(121, 85, 72);
+$dashed: 1px dashed rgb(121, 85, 72);
+
+/*=== begin common style ===*/
+html {
+	height: 100%;
+}
+
+body {
+	min-width: 320px;
+	font-family: "Arsenal", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+.img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.content-right {
+	padding: 0 30px;
+}
+
+.page-title {
+	margin-top: 0;
+	margin-bottom: 50px;
+	display: inline-block;
+	font-size: 34px;
+	color: rgb(121, 85, 72);
+	border-bottom: 1px dashed rgb(121, 85, 72);
+	text-align: left;
+}
+
+.section-title {
+	margin-top: 0;
+	font-size: 30px;
+	color: rgb(121, 85, 72);
+	line-height: 1.2;
+	text-align: left;
+}
+
+.block-title {
+	margin: 0;
+	font-size: 26px;
+	color: rgb(121, 85, 72);
+	text-align: left;
+}
+
+.section-separator {
+	margin-bottom: 50px;
+	border-bottom: 2px dashed #a87562;
+}
+
+.info {
+	margin-bottom: 50px;
+}
+
+.text {
+	font-size: 14px;
+	color: rgb(0, 0, 0);
+	text-align: left;
+}
+
+.wrap-btn {
+	text-align: center;
+}
+
+.btn {
+	position: relative;
+	display: inline-block;
+	border-style: solid;
+	border-radius: 20px;
+	text-align: center;
+	border-width: 3px;
+	outline: 0;
+	padding: 0;
+	transition: all 0.3s;
+	background-color: inherit;
+}
+
+.btn.btn-yellow {
+	border-color: rgb(253, 216, 53);
+
+	&:hover {
+		background-color: rgb(253, 216, 53);
+	}
+
+}
+
+.btn.btn-green {
+	border-color: rgb(149, 169, 83);
+	color: rgb(149, 169, 83);
+
+	&:hover {
+		background-color: rgb(149, 169, 83);
+		color: rgb(255, 255, 255);
+	}
+
+}
+
+.btn.btn-brown {
+	border-color: rgb(121, 85, 72);
+	color: rgb(121, 85, 72);
+
+	&:hover {
+		background-color: rgb(121, 85, 72);
+		color: rgb(255, 255, 255);
+	}
+
+}
+
+.btn.btn-grey {
+	border-color: rgb(149, 149, 149);
+	color: rgb(149, 149, 149);
+
+	&:hover {
+		background-color: rgb(149, 149, 149);
+		color: rgb(255, 255, 255);
+	}
+
+}
+
+.btn-see {
+	border-width: 2px;
+	width: 127px;
+	height: 26px;
+	font-size: 16px;
+	text-align: center;
+
+	.fa-eye {
+		padding-right: 10px;
+	}
+
+}
+
+.btn-form {
+	width: 136px;
+	height: 34px;
+	font-size: 20px;
+	color: $color;
+}
+
+.justify-h:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.justify-w:after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+}
+
+/*=== end common style ===*/
+.input {
+	outline: 0;
+	border-width: 1px;
+	border-color: rgb(174, 174, 174);
+	border-style: solid;
+	padding-left: 5px;
+
+	&-check {
+		display: none;
+
+		&:checked + .label .fa-square-o:before {
+			content: "\f046";
+		}
+
+	}
+
+	&-hide {
+		display: none;
+
+		&:checked+.label {
+			border-bottom: 1px dashed rgb(121, 85, 72);
+		}
+
+	}
+
+	&-size,
+	&-area {
+		border-color: rgb(198, 198, 198);
+		background-color: rgb(255, 255, 255);
+		width: 58px;
+		height: 28px;
+		color: rgb(121, 85, 72);
+	}
+
+	&-form,&-captcha {
+		width: 260px;
+		font-size: 18px;
+
+		&:focus {
+			border-color: #66afe9;
+			outline: 0;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+		}
+
+		&:required:valid {
+			box-shadow: 0 0 3px #5cd053;
+			border-color: #28921f;
+		}
+
+	}
+
+	&-ta {
+		resize: none;
+	}
+
+	&-captcha {
+		width: 160px;
+		vertical-align: middle;
+	}
+
+}
+
+.label {
+	vertical-align: top;
+
+	&-check {
+		margin-right: 10px;
+
+		& > span {
+			margin-left: 5px;
+		}
+
+	}
+
+	&-form {
+		display: inline-block;
+		padding-right: 20px;
+		width: 130px;
+		font-size: 18px;
+	}
+
+}

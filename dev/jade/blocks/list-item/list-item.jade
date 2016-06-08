@@ -1,0 +1,21 @@
+mixin list-item
+  .list-item
+    a.list-img(href='')
+      img.img(src='img/list-img.png', alt='...')
+    .list-info
+      a.list-name(href=''): strong Проект дома - Д-4601
+      .list-prop
+        p.list-param Размер: 6х6
+        p.list-value Площадь: 61м2
+      .list-price
+        .list-price-title
+          span Цена от:
+        .list-price-wrap
+          p.list-price-old: s
+           span.list-price-old-val 195 000
+           |  руб
+          p.list-price-new: strong
+           span.list-price-new-val 195 000
+           |  руб
+      .list-btn-wrap
+        a.btn.btn-yellow.btn-list(href='#', role='button') Подробнее

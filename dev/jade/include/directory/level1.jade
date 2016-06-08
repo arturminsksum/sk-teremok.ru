@@ -1,0 +1,29 @@
+mixin project(name, title)
+  section.project(class=name)
+    h3.section-title Проекты #{title}
+    .project-see
+      a(href="").btn.btn-green.btn-see
+        i.fa.fa-eye
+        |Смотреть                    
+    .project-paginator
+      .project-arrow.previous
+        i.fa.fa-angle-left
+      .project-arrow.next    
+        i.fa.fa-angle-right            
+    .project-slider
+        +list-item
+        +list-item
+        +list-item
+        +list-item
+        +list-item
+        +list-item
+        +list-item
+        +list-item
+    .project-more
+      a(href="").btn.btn-green.btn-more Смотреть все
+
+mixin level1(o)
+  h1.page-title Наши проекты
+  +project('house','домов')
+  .section-separator
+  +project('bathhouse','бань')

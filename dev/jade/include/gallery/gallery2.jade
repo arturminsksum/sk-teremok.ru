@@ -1,0 +1,14 @@
+mixin gallery2(o)
+  h1.page-title Готовые дома
+  section.gallery
+    .gallery-type
+      a(href="#").btn.btn-green.btn-all Все проекты 
+      a(href="#").btn.btn-green.btn-frame Каркасные 
+      a(href="#").btn.btn-green.btn-panel Щитовые
+      a(href="#").btn.btn-green.btn-timber Из бруса
+    .gallery-prod
+      .gallery-wrap
+        - for (var x = 0; x < 18; x++)
+          +gallery-item
+        .gallery-pagination
+          +pagination

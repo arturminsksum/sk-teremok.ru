@@ -1,0 +1,13 @@
+mixin gallery3(o)
+  h1.page-title Готовый дом Д-2345
+  section.gallery
+    .page-back
+      .visible-lg
+        a(href="#").gallery-onmap На карте
+        a(href="#").btn.btn-brown.btn-back В каталог
+    .gallery-prod
+      .gallery-wrap
+        - for (var x = 0; x < 18; x++)
+          +gallery-item
+        .gallery-pagination
+          +pagination

@@ -1,0 +1,36 @@
+.breadcrumb {
+	padding-top: 20px;
+	margin-bottom: 40px;
+
+	&-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		&>li+li:before {
+			content: ">";
+			padding: 0 5px;
+			color: #ccc;
+		}
+
+	}
+
+	&-item {
+		display: inline-block;
+	}
+
+	&-link {
+		font-size: 14px;
+		color: rgb(121, 85, 72);
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&.active {
+			font-weight: bold;
+		}
+
+	}
+
+}

@@ -1,0 +1,63 @@
+mixin footer(o)
+    footer.footer
+      .container-fluid
+        .footer-wrap
+          .row
+            .col-lg-1.visible-lg
+            .col-lg-2.col-sm-3
+              adress.f-contacts
+                div.f-contacts-block
+                  p.f-contacts-phone: strong +7(495)989-77-21
+                  p.f-contacts-city Москва
+                div.f-contacts-block
+                  p.f-contacts-phone: strong +7(495)989-77-21
+                  p.f-contacts-city Санкт-Петербург
+                .copyright 
+                  | Sk-teremok.ru, 2000-2015 (с)</br>Дома и бани под ключ. 
+            .col-lg-2.col-sm-3
+              .f-projects.hidden-xs
+                a.f-projects-title(href="#") Проекты домов
+                ul.f-projects-list.visible-lg
+                  li.f-projects-item
+                    a(href="").f-projects-link - Каркасные
+                  li.f-projects-item
+                    a(href="").f-projects-link - Щитовые
+                  li.f-projects-item
+                    a(href="").f-projects-link - Из бруса 
+              .f-projects.hidden-xs
+                a.f-projects-title(href="#") Проекты бань
+                ul.f-projects-list.visible-lg
+                  li.f-projects-item
+                    a(href="").f-projects-link - Каркасные
+                  li.f-projects-item
+                    a(href="").f-projects-link - Щитовые                  
+            .col-lg-2.visible-lg
+              .f-certif
+                p.f-certif-title Сертификаты качества:
+                a(href="img/certificate.png",rel="certif").f-certif-img
+                  img.img(src='img/certificate.png', alt='certificate')
+                a(href="img/certificate.png",rel="certif").f-certif-img
+                  img.img(src='img/certificate.png', alt='certificate')
+            .col-lg-2.col-sm-3
+              .f-consult.hidden-xs
+                p.f-consult-title Как сделать заказ?
+                a.btn.btn-yellow.btn-consult(href="#feedback") Получить консультацию
+                
+              .f-share
+                p.f-share-title Мы в социальных сетях:
+                a(href="#")
+                  img(src="img/social-vk.png", alt="")
+                a(href="#")
+                  img(src="img/social-fb.png", alt="")
+            .col-lg-2.col-sm-3
+              .f-search
+                p.f-search-title Поиск по сайту
+                .input-wrap
+                  input.input.input-search(type="text", name="search", placeholder="Поиск...")
+              p.develop.hidden-xs
+                a(href="http://awagro.by")
+                  | Разработка и продвижение:
+                  strong 
+                    span awagro
+                    |  style
+

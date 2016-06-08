@@ -1,0 +1,86 @@
+.sidebar {
+	padding: 40px 20px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 1px 0px 3px 0px rgba(0, 0, 1, 0.2);
+	text-align: center;
+
+	&-wrap {
+		.section-title {
+			margin-bottom: 30px;
+			color: rgb(149, 169, 83);
+			text-align: center;
+		}
+		.block-title {
+			margin: 30px 0;
+			text-align: center;
+		}
+		.list-item {
+			box-shadow: 0px 1px 2px 0px rgba(0, 0, 1, 0.1);
+		}
+
+	}
+	&-banner {
+		display: block;
+		margin: 0 auto;
+		max-width: 270px;
+	}
+
+}
+
+.s-menu {
+	margin: 0 auto 30px;
+	padding: 0;
+	list-style: none;
+	max-width: 260px;
+
+	&-title {
+		display: block;
+		border-width: 2px;
+		border-color: rgb(253, 216, 53);
+		border-style: solid;
+		height: 40px;
+		font-size: 22px;
+		color: rgb(121, 85, 72);
+		text-align: center;
+		transition: all 0.3s;
+
+		&:hover {
+			background-color: rgb(253, 216, 53);
+		}
+
+	}
+
+	&-item {
+		position: relative;
+		border-bottom: 1px solid rgb(253, 216, 53);
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			background: url(../img/spritesheet.png) no-repeat -5px -40px;
+			width: 10px;
+			height: 19px;
+			opacity: 0;
+			transition: all 0.3s;
+		}
+
+		&:hover {
+			&:after {
+				opacity: 1;
+			}
+
+		}
+
+	}
+
+	&-link {
+		display: block;
+		font-size: 20px;
+		color: rgb(121, 85, 72);
+		text-align: center;
+		padding: 5px 0;
+	}
+
+}
